@@ -93,5 +93,4 @@ class GarmentImage(models.Model):
 def create_user_profile(sender, instance, created, **kwargs):
 
     if created and instance.garment is not None:
-
         instance.index = GarmentImage.objects.filter(garment=instance.garment).count() + 1
