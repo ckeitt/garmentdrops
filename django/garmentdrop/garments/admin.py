@@ -8,6 +8,7 @@ from garments.models import Colorway
 from garments.models import GarmentSize
 from garments.models import GarmentGender
 from garments.models import GarmentFabric
+from garments.models import GarmentImage
 
 @admin.register(Garment)
 class GarmentAdmin(admin.ModelAdmin):
@@ -27,4 +28,8 @@ class GarmentGenderAdmin(admin.ModelAdmin):
 
 @admin.register(GarmentFabric)
 class GarmentFabricAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(GarmentImage)
+class GarmentImageAdmin(admin.ModelAdmin):
     pass

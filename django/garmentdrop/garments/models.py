@@ -4,7 +4,11 @@ from __future__ import unicode_literals
 import uuid
 from django.db import models
 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 from seasons.models import DropDate
+from sorl.thumbnail import ImageField
 
 class Garment(models.Model):
     
@@ -75,3 +79,18 @@ class GarmentFabric(models.Model):
     description = models.TextField(blank=True, null=True)
     name = models.CharField(max_length=255)
     created_at = models.DateField(auto_now_add=True)
+
+class GarmentImage(models.Model):
+
+    description = models.TextField(blank=True, null=True)
+    name = models.CharField(max_length=255)
+    created_at = models.DateField(auto_now_add=True)
+    index = models.IntegerField(default=0)
+    image = models.ImageField(blank=True, null=True)
+    garment = models.ForeignKey('Garment', blank=True, null=True)
+
+@receiver(post_save, sender=GarmentImage)
+def create_user_profile(sender, instance, created, **kwargs):
+
+    if created and instance.garment is not None:
+        instance.index = GarmentImage.objects.filter(garment=instance.garment).count() + 1

@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'seasons',
+    'garments',
+    'storages',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,34 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'garmentdrop.wsgi.application'
 
+# Sorl Thumbnail override
+# https://github.com/jazzband/sorl-thumbnail
+
+THUMBNAIL_FORCE_OVERWRITE = True
+
+# S3 Credentials
+
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_STORAGE_BUCKET_NAME = 'garment-drop'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+# Static Storage Locations
+
+AWS_STATIC_LOCATION = 'static'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_STATIC_LOCATION)
+STATICFILES_STORAGE = 'garmentdrop.storage_backends.StaticStorage'
+
+# Media Storage Locations
+
+AWS_PUBLIC_MEDIA_LOCATION = 'media/public'
+DEFAULT_FILE_STORAGE = 'garmentdrop.storage_backends.PublicMediaStorage'
+
+AWS_PRIVATE_MEDIA_LOCATION = 'media/private'
+PRIVATE_FILE_LOCATION = 'garmentdrop.storage_backends.PrivateMediaStorage'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
