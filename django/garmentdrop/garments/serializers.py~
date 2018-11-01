@@ -1,0 +1,20 @@
+from rest_framework.serializers import ModelSerializer
+
+from garments.models import BaseGarment
+from garments.models import Garment
+
+class BaseGarmentSerializer(ModelSerializer):
+
+    type = GarmentTypeSerializer(many=True, read_only=True)
+    fabric = GarmentFabricSerializer(many=True, read_only=True)
+    drop_date = DropDateSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = BaseGarment
+        fields = ('description','name','type', 'fabric', 'drop_date')
+
+class GarmentSerializer(ModelSerializer):
+
+    class Meta:
+        model = Garment
+        fields = ('id','users','created_at', 'updated_at',)
