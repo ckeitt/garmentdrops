@@ -1,0 +1,6 @@
+from django.urls import path
+from garments import views
+
+urlpatterns = [
+    path('garments/', views.ListGarments.as_view()),
+]

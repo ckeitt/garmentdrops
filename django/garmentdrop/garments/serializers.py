@@ -8,6 +8,7 @@ from garments.models import Colorway
 from garments.models import GarmentSize
 from garments.models import GarmentGender
 from garments.models import GarmentImage
+from seasons.serializers import DropDateSerializer
 
 class GarmentTypeSerializer(ModelSerializer):
     class Meta:
