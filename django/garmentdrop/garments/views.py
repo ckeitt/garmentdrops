@@ -3,16 +3,25 @@ from __future__ import unicode_literals
 
 from garments.models import Garment
 from garments.models import GarmentType
+from garments.models import BaseGarment
 
 from garments.serializers import GarmentSerializer
 from garments.serializers import GarmentTypeSerializer
+from garments.serializers import BaseGarmentSerializer
 
 from rest_framework import authentication, permissions
 from rest_framework import generics
 
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework.reverse import reverse
+class ListBaseGarments(generics.ListAPIView):
+    """
+    View to list all base garment elements in the system.
+
+    * Public availability to all users.
+    """
+
+    queryset = BaseGarment.objects.all()
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = BaseGarmentSerializer
 
 class ListGarments(generics.ListAPIView):
     """
@@ -35,4 +44,3 @@ class ListGarmentTypes(generics.ListAPIView):
     queryset = GarmentType.objects.all()
     permission_classes = (permissions.AllowAny,)
     serializer_class = GarmentTypeSerializer
-    
