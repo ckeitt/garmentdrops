@@ -37,9 +37,9 @@ class GarmentGenderSerializer(ModelSerializer):
 
 class BaseGarmentSerializer(ModelSerializer):
 
-    type = GarmentTypeSerializer(many=True, read_only=True)
-    fabric = GarmentFabricSerializer(many=True, read_only=True)
-    drop_date = DropDateSerializer(many=True, read_only=True)
+    type = GarmentTypeSerializer(many=False, read_only=True)
+    fabric = GarmentFabricSerializer(many=False, read_only=True)
+    drop_date = DropDateSerializer(many=False, read_only=True)
 
     class Meta:
         model = BaseGarment
@@ -47,9 +47,9 @@ class BaseGarmentSerializer(ModelSerializer):
 
 class GarmentSerializer(ModelSerializer):
 
-    base_garment = BaseGarmentSerializer(many=True, read_only=True)
-    color = ColorwaySerializer(many=True, read_only=True)
-    size = GarmentSizeSerializer(many=True, read_only=True)
+    base_garment = BaseGarmentSerializer(many=False, read_only=True)
+    color = ColorwaySerializer(many=False, read_only=True)
+    size = GarmentSizeSerializer(many=False, read_only=True)
 
     class Meta:
         model = Garment

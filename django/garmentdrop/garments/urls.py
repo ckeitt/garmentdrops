@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from garments import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    url('garments/', views.ListGarments.as_view()),
+    url('garments/$', views.ListGarments.as_view()),
+    url('garments/types/', views.ListGarmentTypes.as_view()),
 ]
