@@ -11,6 +11,10 @@ from garments.serializers import BaseGarmentSerializer
 
 from rest_framework import authentication, permissions
 from rest_framework import generics
+from rest_framework import mixins
+
+from rest_framework.response import Response
+from rest_framework import status
 
 class ListBaseGarments(generics.ListAPIView):
     """
@@ -44,3 +48,20 @@ class ListGarmentTypes(generics.ListAPIView):
     queryset = GarmentType.objects.all()
     permission_classes = (permissions.AllowAny,)
     serializer_class = GarmentTypeSerializer
+
+class ListSpecificGarmentTypes(generics.ListAPIView):
+    """
+    View to list all garments of a specific in the system.
+
+    * Public availability to all users.
+    """
+
+    queryset = Garment.objects.all()
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = GarmentSerializer
+    
+    def filter_queryset(self, queryset):
+        queryset = Garment.objects.filter(base_garment__type__pk=self.kwargs['pk'])
+        return queryset
+
+
