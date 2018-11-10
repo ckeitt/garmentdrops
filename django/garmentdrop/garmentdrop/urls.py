@@ -20,4 +20,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('', include('garments.urls')),
+    url('', include('seasons.urls')),
 ]

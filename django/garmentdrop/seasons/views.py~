@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from seasons.models import Season
+from seasons.models import DropDate
+
+from seasons.serializers import SeasonSerializer
+from seasons.serializers import DropDateSerializer
+
+from rest_framework import authentication, permissions
+from rest_framework import generics
+
+class ListSeasons(generics.ListAPIView):
+    """
+    View to list all seasons in the system.
+
+    * Public availability to all users.
+    """
+
+    queryset = Season.objects.all()
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = SeasonSerializer

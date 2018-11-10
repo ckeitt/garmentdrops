@@ -1,0 +1,6 @@
+from django.conf.urls import url
+from seasons import views
+
+urlpatterns = [
+    url('^seasons/$', views.ListSeasons.as_view()),
+]

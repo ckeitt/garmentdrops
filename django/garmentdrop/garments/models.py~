@@ -14,21 +14,15 @@ from django.dispatch import receiver
 from seasons.models import DropDate
 from sorl.thumbnail import ImageField
 
-class Garment(models.Model):
+class BaseGarment(models.Model):
     
-    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(blank=True, null=True)
-    descrption = models.TextField(blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
-    color = models.ForeignKey('Colorway', on_delete=models.CASCADE, blank=True, null=True)
     type = models.ForeignKey('GarmentType', on_delete=models.CASCADE, blank=True, null=True)
     fabric = models.ForeignKey('GarmentFabric', blank=True, null=True)
     drop_date = models.ForeignKey(DropDate, blank=True, null=True)
-    sizes = models.ManyToManyField('GarmentSize', blank=True, null=True)
-
-    quantity = models.IntegerField(default=0)
-    price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
 
     @classmethod
     def get_available_garments(self):
@@ -36,7 +30,22 @@ class Garment(models.Model):
 
     def __unicode__(self):
         if (self.name is not None):
-            return '%s - %s' % (self.uuid, self.name)
+            return '%s' % self.name
+
+class Garment(models.Model):
+    
+    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    base_garment = models.ForeignKey('BaseGarment', blank=True, null=True)
+    created_at = models.DateField(auto_now_add=True)
+    color = models.ForeignKey('Colorway', on_delete=models.CASCADE, blank=True, null=True)
+    size = models.ForeignKey('GarmentSize', blank=True, null=True)
+
+    quantity = models.IntegerField(default=0)
+    price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+
+    def __unicode__(self):
+        if (self.base_garment.name is not None and self.size is not None):
+            return '%s - %s' % (self.base_garment.name, self.size)
 
 class Colorway(models.Model):
 

@@ -38,6 +38,18 @@ class ListGarments(generics.ListAPIView):
     permission_classes = (permissions.AllowAny,)
     serializer_class = GarmentSerializer
 
+class RetrieveGarment(generics.RetrieveAPIView):
+    """
+    View specific garment in the system.
+
+    * Public availability to all users.
+    """
+
+    queryset = Garment.objects.all()
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = GarmentSerializer
+    lookup_field = 'uuid'
+
 class ListGarmentTypes(generics.ListAPIView):
     """
     View to list all garments in the system.
@@ -51,7 +63,7 @@ class ListGarmentTypes(generics.ListAPIView):
 
 class ListSpecificGarmentTypes(generics.ListAPIView):
     """
-    View to list all garments of a specific in the system.
+    View to list all garments of a specific type in the system.
 
     * Public availability to all users.
     """
@@ -63,5 +75,4 @@ class ListSpecificGarmentTypes(generics.ListAPIView):
     def filter_queryset(self, queryset):
         queryset = Garment.objects.filter(base_garment__type__pk=self.kwargs['pk'])
         return queryset
-
 

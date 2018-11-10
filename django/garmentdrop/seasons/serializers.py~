@@ -10,7 +10,7 @@ class SeasonSerializer(ModelSerializer):
 
 class DropDateSerializer(ModelSerializer):
 
-    season = SeasonSerializer(many=False, read_only=True)
+    season = SeasonSerializer(many=True, read_only=True)
 
     class Meta:
         model = DropDate

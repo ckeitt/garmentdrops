@@ -26,7 +26,7 @@ class BaseGarment(models.Model):
 
     @classmethod
     def get_available_garments(self):
-        return self.objects.filter(quantity__gt=0, drop_date__release_date__lte=date.today())
+        return cls.objects.filter(quantity__gt=0, drop_date__release_date__lte=date.today())
 
     def __unicode__(self):
         if (self.name is not None):

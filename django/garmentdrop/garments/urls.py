@@ -1,10 +1,11 @@
 from django.conf.urls import url
 from garments import views
-from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    url('^garments/$', views.ListGarments.as_view()),
-    url('^garments/types/$', views.ListGarmentTypes.as_view()),
-    url('^garments/base/$', views.ListBaseGarments.as_view()),
-    url('^garments/(?P<pk>.+)/$', views.ListSpecificGarmentTypes.as_view()),
+    url(r'^garments/types/$', views.ListGarmentTypes.as_view()),
+    url(r'^garments/base/$', views.ListBaseGarments.as_view()),
+    url(r'^garments/types/(?P<pk>.+)/$', views.ListSpecificGarmentTypes.as_view()),
+    url(r'^garments/(?P<uuid>.+)/$', views.RetrieveGarment.as_view()),
+    url(r'^garments/', views.ListGarments.as_view()),
 ]
+
