@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40569E1C219685450070B93A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E1B219685450070B93A /* AppDelegate.m */; };
+		40569E24219685470070B93A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40569E23219685470070B93A /* Assets.xcassets */; };
+		40569E27219685470070B93A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40569E25219685470070B93A /* LaunchScreen.storyboard */; };
+		40569E2A219685470070B93A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E29219685470070B93A /* main.m */; };
+		40569E34219685470070B93A /* GarmentDropsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E33219685470070B93A /* GarmentDropsTests.m */; };
+		40569E3F219685470070B93A /* GarmentDropsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E3E219685470070B93A /* GarmentDropsUITests.m */; };
+		40569E532196875B0070B93A /* BaseGarment.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E522196875B0070B93A /* BaseGarment.m */; };
+		40569E56219687C50070B93A /* Garment.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E55219687C50070B93A /* Garment.m */; };
+		40569E59219688350070B93A /* Colorway.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E58219688350070B93A /* Colorway.m */; };
+		40569E5C2196888E0070B93A /* GarmentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E5B2196888E0070B93A /* GarmentType.m */; };
+		40569E5F219688EA0070B93A /* GarmentSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E5E219688EA0070B93A /* GarmentSize.m */; };
+		40569E62219689430070B93A /* GarmentGender.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E61219689430070B93A /* GarmentGender.m */; };
+		40569E65219689670070B93A /* GarmentFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E64219689670070B93A /* GarmentFabric.m */; };
+		40569E68219689AF0070B93A /* GarmentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E67219689AF0070B93A /* GarmentImage.m */; };
+		40569E6D21968A2C0070B93A /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E6C21968A2C0070B93A /* Season.m */; };
+		40569E7021968A6A0070B93A /* DropDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E6F21968A6A0070B93A /* DropDate.m */; };
+		FBA58F4244EE6CBA73A4C8AE /* libPods-GarmentDrops.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BDC0708633D17DBF94FBF /* libPods-GarmentDrops.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40569E30219685470070B93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40569E0F219685450070B93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40569E16219685450070B93A;
+			remoteInfo = GarmentDrops;
+		};
+		40569E3B219685470070B93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40569E0F219685450070B93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40569E16219685450070B93A;
+			remoteInfo = GarmentDrops;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40569E17219685450070B93A /* GarmentDrops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GarmentDrops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40569E1A219685450070B93A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		40569E1B219685450070B93A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		40569E23219685470070B93A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40569E26219685470070B93A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40569E28219685470070B93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40569E29219685470070B93A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40569E2F219685470070B93A /* GarmentDropsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GarmentDropsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40569E33219685470070B93A /* GarmentDropsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentDropsTests.m; sourceTree = "<group>"; };
+		40569E35219685470070B93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40569E3A219685470070B93A /* GarmentDropsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GarmentDropsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40569E3E219685470070B93A /* GarmentDropsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentDropsUITests.m; sourceTree = "<group>"; };
+		40569E40219685470070B93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40569E512196875B0070B93A /* BaseGarment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseGarment.h; sourceTree = "<group>"; };
+		40569E522196875B0070B93A /* BaseGarment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseGarment.m; sourceTree = "<group>"; };
+		40569E54219687C50070B93A /* Garment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garment.h; sourceTree = "<group>"; };
+		40569E55219687C50070B93A /* Garment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Garment.m; sourceTree = "<group>"; };
+		40569E57219688350070B93A /* Colorway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colorway.h; sourceTree = "<group>"; };
+		40569E58219688350070B93A /* Colorway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Colorway.m; sourceTree = "<group>"; };
+		40569E5A2196888E0070B93A /* GarmentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentType.h; sourceTree = "<group>"; };
+		40569E5B2196888E0070B93A /* GarmentType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentType.m; sourceTree = "<group>"; };
+		40569E5D219688EA0070B93A /* GarmentSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentSize.h; sourceTree = "<group>"; };
+		40569E5E219688EA0070B93A /* GarmentSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentSize.m; sourceTree = "<group>"; };
+		40569E60219689430070B93A /* GarmentGender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentGender.h; sourceTree = "<group>"; };
+		40569E61219689430070B93A /* GarmentGender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentGender.m; sourceTree = "<group>"; };
+		40569E63219689670070B93A /* GarmentFabric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentFabric.h; sourceTree = "<group>"; };
+		40569E64219689670070B93A /* GarmentFabric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentFabric.m; sourceTree = "<group>"; };
+		40569E66219689AF0070B93A /* GarmentImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentImage.h; sourceTree = "<group>"; };
+		40569E67219689AF0070B93A /* GarmentImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentImage.m; sourceTree = "<group>"; };
+		40569E6B21968A2C0070B93A /* Season.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Season.h; sourceTree = "<group>"; };
+		40569E6C21968A2C0070B93A /* Season.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Season.m; sourceTree = "<group>"; };
+		40569E6E21968A6A0070B93A /* DropDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDate.h; sourceTree = "<group>"; };
+		40569E6F21968A6A0070B93A /* DropDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropDate.m; sourceTree = "<group>"; };
+		8B33EBB68AA1196B02E0E4C6 /* Pods-GarmentDrops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarmentDrops.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarmentDrops/Pods-GarmentDrops.release.xcconfig"; sourceTree = "<group>"; };
+		C89BBB32FC15968FFB1CD8C5 /* Pods-GarmentDrops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarmentDrops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarmentDrops/Pods-GarmentDrops.debug.xcconfig"; sourceTree = "<group>"; };
+		EA4BDC0708633D17DBF94FBF /* libPods-GarmentDrops.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GarmentDrops.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40569E14219685450070B93A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA58F4244EE6CBA73A4C8AE /* libPods-GarmentDrops.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40569E2C219685470070B93A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40569E37219685470070B93A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40569E0E219685450070B93A = {
+			isa = PBXGroup;
+			children = (
+				40569E19219685450070B93A /* GarmentDrops */,
+				40569E32219685470070B93A /* GarmentDropsTests */,
+				40569E3D219685470070B93A /* GarmentDropsUITests */,
+				40569E18219685450070B93A /* Products */,
+				E705A9F16225F89503E0810F /* Pods */,
+				B5C8485DFAAFFED77A1BF518 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40569E18219685450070B93A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40569E17219685450070B93A /* GarmentDrops.app */,
+				40569E2F219685470070B93A /* GarmentDropsTests.xctest */,
+				40569E3A219685470070B93A /* GarmentDropsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40569E19219685450070B93A /* GarmentDrops */ = {
+			isa = PBXGroup;
+			children = (
+				40569E50219686530070B93A /* Views */,
+				40569E4C219686220070B93A /* Models */,
+				40569E1A219685450070B93A /* AppDelegate.h */,
+				40569E1B219685450070B93A /* AppDelegate.m */,
+				40569E23219685470070B93A /* Assets.xcassets */,
+				40569E25219685470070B93A /* LaunchScreen.storyboard */,
+				40569E28219685470070B93A /* Info.plist */,
+				40569E29219685470070B93A /* main.m */,
+			);
+			path = GarmentDrops;
+			sourceTree = "<group>";
+		};
+		40569E32219685470070B93A /* GarmentDropsTests */ = {
+			isa = PBXGroup;
+			children = (
+				40569E33219685470070B93A /* GarmentDropsTests.m */,
+				40569E35219685470070B93A /* Info.plist */,
+			);
+			path = GarmentDropsTests;
+			sourceTree = "<group>";
+		};
+		40569E3D219685470070B93A /* GarmentDropsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40569E3E219685470070B93A /* GarmentDropsUITests.m */,
+				40569E40219685470070B93A /* Info.plist */,
+			);
+			path = GarmentDropsUITests;
+			sourceTree = "<group>";
+		};
+		40569E4C219686220070B93A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40569E6A21968A140070B93A /* Seasons */,
+				40569E6921968A050070B93A /* Garments */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40569E4D219686270070B93A /* Type View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Type View Controller";
+			sourceTree = "<group>";
+		};
+		40569E4E219686370070B93A /* Collection View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Collection View Controller";
+			sourceTree = "<group>";
+		};
+		40569E4F2196864B0070B93A /* Garment Detail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Garment Detail View Controller";
+			sourceTree = "<group>";
+		};
+		40569E50219686530070B93A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40569E4F2196864B0070B93A /* Garment Detail View Controller */,
+				40569E4E219686370070B93A /* Collection View Controller */,
+				40569E4D219686270070B93A /* Type View Controller */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40569E6921968A050070B93A /* Garments */ = {
+			isa = PBXGroup;
+			children = (
+				40569E512196875B0070B93A /* BaseGarment.h */,
+				40569E522196875B0070B93A /* BaseGarment.m */,
+				40569E54219687C50070B93A /* Garment.h */,
+				40569E55219687C50070B93A /* Garment.m */,
+				40569E57219688350070B93A /* Colorway.h */,
+				40569E58219688350070B93A /* Colorway.m */,
+				40569E5A2196888E0070B93A /* GarmentType.h */,
+				40569E5B2196888E0070B93A /* GarmentType.m */,
+				40569E5D219688EA0070B93A /* GarmentSize.h */,
+				40569E5E219688EA0070B93A /* GarmentSize.m */,
+				40569E60219689430070B93A /* GarmentGender.h */,
+				40569E61219689430070B93A /* GarmentGender.m */,
+				40569E63219689670070B93A /* GarmentFabric.h */,
+				40569E64219689670070B93A /* GarmentFabric.m */,
+				40569E66219689AF0070B93A /* GarmentImage.h */,
+				40569E67219689AF0070B93A /* GarmentImage.m */,
+			);
+			path = Garments;
+			sourceTree = "<group>";
+		};
+		40569E6A21968A140070B93A /* Seasons */ = {
+			isa = PBXGroup;
+			children = (
+				40569E6B21968A2C0070B93A /* Season.h */,
+				40569E6C21968A2C0070B93A /* Season.m */,
+				40569E6E21968A6A0070B93A /* DropDate.h */,
+				40569E6F21968A6A0070B93A /* DropDate.m */,
+			);
+			path = Seasons;
+			sourceTree = "<group>";
+		};
+		B5C8485DFAAFFED77A1BF518 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA4BDC0708633D17DBF94FBF /* libPods-GarmentDrops.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E705A9F16225F89503E0810F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C89BBB32FC15968FFB1CD8C5 /* Pods-GarmentDrops.debug.xcconfig */,
+				8B33EBB68AA1196B02E0E4C6 /* Pods-GarmentDrops.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40569E16219685450070B93A /* GarmentDrops */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40569E43219685470070B93A /* Build configuration list for PBXNativeTarget "GarmentDrops" */;
+			buildPhases = (
+				FADF6FC088A5F66C037D1B24 /* [CP] Check Pods Manifest.lock */,
+				40569E13219685450070B93A /* Sources */,
+				40569E14219685450070B93A /* Frameworks */,
+				40569E15219685450070B93A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GarmentDrops;
+			productName = GarmentDrops;
+			productReference = 40569E17219685450070B93A /* GarmentDrops.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40569E2E219685470070B93A /* GarmentDropsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40569E46219685470070B93A /* Build configuration list for PBXNativeTarget "GarmentDropsTests" */;
+			buildPhases = (
+				40569E2B219685470070B93A /* Sources */,
+				40569E2C219685470070B93A /* Frameworks */,
+				40569E2D219685470070B93A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40569E31219685470070B93A /* PBXTargetDependency */,
+			);
+			name = GarmentDropsTests;
+			productName = GarmentDropsTests;
+			productReference = 40569E2F219685470070B93A /* GarmentDropsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40569E39219685470070B93A /* GarmentDropsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40569E49219685470070B93A /* Build configuration list for PBXNativeTarget "GarmentDropsUITests" */;
+			buildPhases = (
+				40569E36219685470070B93A /* Sources */,
+				40569E37219685470070B93A /* Frameworks */,
+				40569E38219685470070B93A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40569E3C219685470070B93A /* PBXTargetDependency */,
+			);
+			name = GarmentDropsUITests;
+			productName = GarmentDropsUITests;
+			productReference = 40569E3A219685470070B93A /* GarmentDropsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40569E0F219685450070B93A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Caleb Keitt";
+				TargetAttributes = {
+					40569E16219685450070B93A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					40569E2E219685470070B93A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 40569E16219685450070B93A;
+					};
+					40569E39219685470070B93A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 40569E16219685450070B93A;
+					};
+				};
+			};
+			buildConfigurationList = 40569E12219685450070B93A /* Build configuration list for PBXProject "GarmentDrops" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40569E0E219685450070B93A;
+			productRefGroup = 40569E18219685450070B93A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40569E16219685450070B93A /* GarmentDrops */,
+				40569E2E219685470070B93A /* GarmentDropsTests */,
+				40569E39219685470070B93A /* GarmentDropsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40569E15219685450070B93A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40569E27219685470070B93A /* LaunchScreen.storyboard in Resources */,
+				40569E24219685470070B93A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40569E2D219685470070B93A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40569E38219685470070B93A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FADF6FC088A5F66C037D1B24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GarmentDrops-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40569E13219685450070B93A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40569E7021968A6A0070B93A /* DropDate.m in Sources */,
+				40569E2A219685470070B93A /* main.m in Sources */,
+				40569E6D21968A2C0070B93A /* Season.m in Sources */,
+				40569E5F219688EA0070B93A /* GarmentSize.m in Sources */,
+				40569E532196875B0070B93A /* BaseGarment.m in Sources */,
+				40569E5C2196888E0070B93A /* GarmentType.m in Sources */,
+				40569E68219689AF0070B93A /* GarmentImage.m in Sources */,
+				40569E56219687C50070B93A /* Garment.m in Sources */,
+				40569E65219689670070B93A /* GarmentFabric.m in Sources */,
+				40569E62219689430070B93A /* GarmentGender.m in Sources */,
+				40569E59219688350070B93A /* Colorway.m in Sources */,
+				40569E1C219685450070B93A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40569E2B219685470070B93A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40569E34219685470070B93A /* GarmentDropsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40569E36219685470070B93A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40569E3F219685470070B93A /* GarmentDropsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40569E31219685470070B93A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40569E16219685450070B93A /* GarmentDrops */;
+			targetProxy = 40569E30219685470070B93A /* PBXContainerItemProxy */;
+		};
+		40569E3C219685470070B93A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40569E16219685450070B93A /* GarmentDrops */;
+			targetProxy = 40569E3B219685470070B93A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40569E25219685470070B93A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40569E26219685470070B93A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40569E41219685470070B93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40569E42219685470070B93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40569E44219685470070B93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C89BBB32FC15968FFB1CD8C5 /* Pods-GarmentDrops.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK9SVP2XJQ;
+				INFOPLIST_FILE = GarmentDrops/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GarmentDrops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		40569E45219685470070B93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B33EBB68AA1196B02E0E4C6 /* Pods-GarmentDrops.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK9SVP2XJQ;
+				INFOPLIST_FILE = GarmentDrops/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GarmentDrops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		40569E47219685470070B93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK9SVP2XJQ;
+				INFOPLIST_FILE = GarmentDropsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GarmentDropsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GarmentDrops.app/GarmentDrops";
+			};
+			name = Debug;
+		};
+		40569E48219685470070B93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK9SVP2XJQ;
+				INFOPLIST_FILE = GarmentDropsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GarmentDropsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GarmentDrops.app/GarmentDrops";
+			};
+			name = Release;
+		};
+		40569E4A219685470070B93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK9SVP2XJQ;
+				INFOPLIST_FILE = GarmentDropsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GarmentDropsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GarmentDrops;
+			};
+			name = Debug;
+		};
+		40569E4B219685470070B93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK9SVP2XJQ;
+				INFOPLIST_FILE = GarmentDropsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GarmentDropsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GarmentDrops;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40569E12219685450070B93A /* Build configuration list for PBXProject "GarmentDrops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40569E41219685470070B93A /* Debug */,
+				40569E42219685470070B93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40569E43219685470070B93A /* Build configuration list for PBXNativeTarget "GarmentDrops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40569E44219685470070B93A /* Debug */,
+				40569E45219685470070B93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40569E46219685470070B93A /* Build configuration list for PBXNativeTarget "GarmentDropsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40569E47219685470070B93A /* Debug */,
+				40569E48219685470070B93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40569E49219685470070B93A /* Build configuration list for PBXNativeTarget "GarmentDropsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40569E4A219685470070B93A /* Debug */,
+				40569E4B219685470070B93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40569E0F219685450070B93A /* Project object */;
+}

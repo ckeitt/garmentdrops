@@ -1,0 +1,4 @@
+garmentdropenv/
+db.sqlite3
+garment-drop-credentials/
+garment-drop-s3-details/
