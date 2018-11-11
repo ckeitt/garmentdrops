@@ -23,6 +23,7 @@ class BaseGarment(models.Model):
     type = models.ForeignKey('GarmentType', on_delete=models.CASCADE, blank=True, null=True)
     fabric = models.ForeignKey('GarmentFabric', blank=True, null=True)
     drop_date = models.ForeignKey(DropDate, blank=True, null=True)
+    active = models.BooleanField(default=True)
 
     @classmethod
     def get_available_garments(self):

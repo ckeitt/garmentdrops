@@ -148,7 +148,7 @@
  
  @param block The block to execute after acquiring an exclusive lock on the receiver.
  */
-- (void)performBlockWithLock:(void (^)(void))block;
+- (void)performBlockWithLock:(void (^)())block;
 
 @end
 

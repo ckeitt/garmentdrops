@@ -18,11 +18,11 @@
 //  limitations under the License.
 //
 
-#import "RKMappingOperationDataSource.h"
-#import "RKMapperOperation.h"
-#import "RKMappingResult.h"
+#import <RestKit/ObjectMapping/RKMapperOperation.h>
+#import <RestKit/ObjectMapping/RKMappingOperationDataSource.h>
+#import <RestKit/ObjectMapping/RKMappingResult.h>
 
-#if __has_include("CoreData.h")
+#ifdef _COREDATADEFINES_H
 @protocol RKManagedObjectCaching;
 #endif
 
@@ -205,7 +205,7 @@
 @interface RKObjectResponseMapperOperation : RKResponseMapperOperation
 @end
 
-#if __has_include("CoreData.h")
+#ifdef _COREDATADEFINES_H
 /**
  `RKManagedObjectResponseMapperOperation` is an `RKResponseMapperOperation` subclass that provides support for performing object mapping using `RKEntityMapping` objects that target `NSManagedObject` derived classes. It requires an `NSManagedObjectContext` and a configured `RKManagedObjectMappingOperationDataSource` data source to execute successfully.
  

@@ -18,8 +18,8 @@
 //  limitations under the License.
 //
 
-#import "TransitionKit.h"
-#import "RKOperationStateMachine.h"
+#import <RestKit/Support/RKOperationStateMachine.h>
+#import <TransitionKit/TransitionKit.h>
 
 NSString *const RKOperationFailureException = @"RKOperationFailureException";
 
@@ -199,7 +199,7 @@ static NSString *const RKOperationLockName = @"org.restkit.operation.lock";
             ([self isCancelled] ? @"YES" : @"NO")];
 }
 
-- (void)performBlockWithLock:(void (^)(void))block
+- (void)performBlockWithLock:(void (^)())block
 {
     [self.lock lock];
     block();

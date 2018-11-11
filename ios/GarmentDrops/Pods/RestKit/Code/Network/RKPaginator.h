@@ -18,10 +18,10 @@
 //  limitations under the License.
 //
 
-#import "RKHTTPRequestOperation.h"
-#import "RKObjectRequestOperation.h"
-#import "RKObjectMapping.h"
-#import "RKMappingResult.h"
+#import <RestKit/Network/RKHTTPRequestOperation.h>
+#import <RestKit/Network/RKObjectRequestOperation.h>
+#import <RestKit/ObjectMapping/RKMappingResult.h>
+#import <RestKit/ObjectMapping/RKObjectMapping.h>
 
 @protocol RKManagedObjectCaching;
 
@@ -156,7 +156,7 @@
 /// @name Core Data Configuration
 ///------------------------------
 
-#if __has_include("CoreData.h")
+#ifdef _COREDATADEFINES_H
 /**
  The managed object context in which paginated managed objects are to be persisted.
  */

@@ -23,7 +23,7 @@ class ListBaseGarments(generics.ListAPIView):
     * Public availability to all users.
     """
 
-    queryset = BaseGarment.objects.all()
+    queryset = BaseGarment.objects.filter(active=True)
     permission_classes = (permissions.AllowAny,)
     serializer_class = BaseGarmentSerializer
 
@@ -34,7 +34,7 @@ class ListGarments(generics.ListAPIView):
     * Public availability to all users.
     """
 
-    queryset = Garment.objects.all()
+    queryset = Garment.objects.filter(base_garment__active=True)
     permission_classes = (permissions.AllowAny,)
     serializer_class = GarmentSerializer
 
@@ -45,7 +45,7 @@ class RetrieveGarment(generics.RetrieveAPIView):
     * Public availability to all users.
     """
 
-    queryset = Garment.objects.all()
+    queryset = Garment.objects.filter(base_garment__active=True)
     permission_classes = (permissions.AllowAny,)
     serializer_class = GarmentSerializer
     lookup_field = 'uuid'
@@ -68,7 +68,7 @@ class ListSpecificGarmentTypes(generics.ListAPIView):
     * Public availability to all users.
     """
 
-    queryset = Garment.objects.all()
+    queryset = Garment.objects.filter(base_garment__active=True)
     permission_classes = (permissions.AllowAny,)
     serializer_class = GarmentSerializer
     

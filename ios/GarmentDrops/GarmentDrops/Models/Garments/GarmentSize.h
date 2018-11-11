@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString * size;
 @property (nonatomic) NSNumber * length;
 @property (nonatomic) NSDate * createdAt;
+
++(NSDictionary *) mappingDictionary;
++(RKObjectMapping *) responseMapping;
++(RKResponseDescriptor *) responseDescriptor;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TypeViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UIViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TypeViewController alloc] init]];
     
     [self.window makeKeyAndVisible];
     

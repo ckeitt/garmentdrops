@@ -18,16 +18,18 @@
 //  limitations under the License.
 //
 
-#import "RKPaginator.h"
-#import "RKMappingOperation.h"
-#import "SOCKit.h"
-#import "RKLog.h"
-#import "RKPathMatcher.h"
-#import "RKHTTPUtilities.h"
+#import <RestKit/Network/RKPaginator.h>
+#import <RestKit/Network/RKPathMatcher.h>
+#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKit/ObjectMapping/RKMappingOperation.h>
+#import <RestKit/Support/RKLog.h>
+#import <SOCKit/SOCKit.h>
 
-#if __has_include("CoreData.h")
+#ifdef _COREDATADEFINES_H
+#if __has_include("RKCoreData.h")
 #define RKCoreDataIncluded
-#import "RKManagedObjectRequestOperation.h"
+#import <RestKit/Network/RKManagedObjectRequestOperation.h>
+#endif
 #endif
 
 static NSUInteger RKPaginatorDefaultPerPage = 25;

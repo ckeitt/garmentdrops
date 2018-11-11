@@ -18,11 +18,11 @@
 //  limitations under the License.
 //
 
-#import "RKHTTPRequestOperation.h"
-#import "RKLog.h"
-#import "lcl_RK.h"
-#import "RKHTTPUtilities.h"
-#import "RKMIMETypes.h"
+#import <RestKit/Network/RKHTTPRequestOperation.h>
+#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKit/Support/RKLog.h>
+#import <RestKit/Support/RKMIMETypes.h>
+#import <RestKit/Support/lcl_RK.h>
 
 extern NSString * const RKErrorDomain;
 
@@ -39,7 +39,7 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
     return YES;
 }
 
-@interface AFRKURLConnectionOperation () <NSURLConnectionDataDelegate>
+@interface AFURLConnectionOperation () <NSURLConnectionDataDelegate>
 @property (readwrite, nonatomic, strong) NSRecursiveLock *lock;
 @end
 
@@ -90,14 +90,15 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
             [userInfo setValue:self.responseString forKey:NSLocalizedRecoverySuggestionErrorKey];
             [userInfo setValue:[self.request URL] forKey:NSURLErrorFailingURLErrorKey];
-            [userInfo setValue:self.request forKey:AFRKNetworkingOperationFailingURLRequestErrorKey];
-            [userInfo setValue:self.response forKey:AFRKNetworkingOperationFailingURLResponseErrorKey];
+            [userInfo setValue:self.request forKey:AFNetworkingOperationFailingURLRequestErrorKey];
+            [userInfo setValue:self.response forKey:AFNetworkingOperationFailingURLResponseErrorKey];
 
             if (![self hasAcceptableStatusCode]) {
                 NSUInteger statusCode = ([self.response isKindOfClass:[NSHTTPURLResponse class]]) ? (NSUInteger)[self.response statusCode] : 200;
                 [userInfo setValue:[NSString stringWithFormat:NSLocalizedString(@"Expected status code in (%@), got %d", nil), RKStringFromIndexSet(self.acceptableStatusCodes ?: [NSMutableIndexSet indexSet]), statusCode] forKey:NSLocalizedDescriptionKey];
                 self.rkHTTPError = [[NSError alloc] initWithDomain:RKErrorDomain code:NSURLErrorBadServerResponse userInfo:userInfo];
-            } else if (![self hasAcceptableContentType] && self.responseData.length > 0) {
+            } else if (![self hasAcceptableContentType] && self.response.statusCode != 204) {
+                // NOTE: 204 responses come back as text/plain, which we don't want
                 [userInfo setValue:[NSString stringWithFormat:NSLocalizedString(@"Expected content type %@, got %@", nil), self.acceptableContentTypes, [self.response MIMEType]] forKey:NSLocalizedDescriptionKey];
                 self.rkHTTPError = [[NSError alloc] initWithDomain:RKErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:userInfo];
             }
@@ -111,9 +112,16 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
 
 #pragma mark - NSURLConnectionDelegate methods
 
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+{
+    [super connection:connection didReceiveAuthenticationChallenge:challenge];
+
+    RKLogDebug(@"Received authentication challenge");
+}
+
 - (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse
 {
-    if ([AFRKHTTPRequestOperation instancesRespondToSelector:@selector(connection:willSendRequest:redirectResponse:)]) {
+    if ([AFHTTPRequestOperation instancesRespondToSelector:@selector(connection:willSendRequest:redirectResponse:)]) {
         NSURLRequest *returnValue = [super connection:connection willSendRequest:request redirectResponse:redirectResponse];
         if (returnValue) {
             if (redirectResponse) RKLogDebug(@"Following redirect request: %@", returnValue);

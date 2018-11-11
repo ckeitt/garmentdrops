@@ -23,6 +23,13 @@
 		40569E68219689AF0070B93A /* GarmentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E67219689AF0070B93A /* GarmentImage.m */; };
 		40569E6D21968A2C0070B93A /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E6C21968A2C0070B93A /* Season.m */; };
 		40569E7021968A6A0070B93A /* DropDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E6F21968A6A0070B93A /* DropDate.m */; };
+		409ED30721975D7900A6FBDA /* GarmentDropAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED30621975D7900A6FBDA /* GarmentDropAPI.m */; };
+		409ED30B21978D2800A6FBDA /* TypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED30A21978D2800A6FBDA /* TypeCollectionViewCell.m */; };
+		409ED30E2197A1A300A6FBDA /* CollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED30D2197A1A300A6FBDA /* CollectionsViewController.m */; };
+		409ED3142197A22300A6FBDA /* CollectionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED3132197A22300A6FBDA /* CollectionsView.m */; };
+		409ED3172197A59600A6FBDA /* CollectionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED3162197A59600A6FBDA /* CollectionsCollectionViewCell.m */; };
+		40D83E8C2197351B00D68605 /* TypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D83E8B2197351B00D68605 /* TypeViewController.m */; };
+		40D83E8F2197355000D68605 /* TypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D83E8E2197355000D68605 /* TypeView.m */; };
 		FBA58F4244EE6CBA73A4C8AE /* libPods-GarmentDrops.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4BDC0708633D17DBF94FBF /* libPods-GarmentDrops.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +84,20 @@
 		40569E6C21968A2C0070B93A /* Season.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Season.m; sourceTree = "<group>"; };
 		40569E6E21968A6A0070B93A /* DropDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDate.h; sourceTree = "<group>"; };
 		40569E6F21968A6A0070B93A /* DropDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropDate.m; sourceTree = "<group>"; };
+		409ED30521975D7900A6FBDA /* GarmentDropAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentDropAPI.h; sourceTree = "<group>"; };
+		409ED30621975D7900A6FBDA /* GarmentDropAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentDropAPI.m; sourceTree = "<group>"; };
+		409ED30921978D2800A6FBDA /* TypeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCollectionViewCell.h; sourceTree = "<group>"; };
+		409ED30A21978D2800A6FBDA /* TypeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeCollectionViewCell.m; sourceTree = "<group>"; };
+		409ED30C2197A1A300A6FBDA /* CollectionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionsViewController.h; sourceTree = "<group>"; };
+		409ED30D2197A1A300A6FBDA /* CollectionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionsViewController.m; sourceTree = "<group>"; };
+		409ED3122197A22300A6FBDA /* CollectionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionsView.h; sourceTree = "<group>"; };
+		409ED3132197A22300A6FBDA /* CollectionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionsView.m; sourceTree = "<group>"; };
+		409ED3152197A59600A6FBDA /* CollectionsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionsCollectionViewCell.h; sourceTree = "<group>"; };
+		409ED3162197A59600A6FBDA /* CollectionsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionsCollectionViewCell.m; sourceTree = "<group>"; };
+		40D83E8A2197351B00D68605 /* TypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeViewController.h; sourceTree = "<group>"; };
+		40D83E8B2197351B00D68605 /* TypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeViewController.m; sourceTree = "<group>"; };
+		40D83E8D2197355000D68605 /* TypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeView.h; sourceTree = "<group>"; };
+		40D83E8E2197355000D68605 /* TypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeView.m; sourceTree = "<group>"; };
 		8B33EBB68AA1196B02E0E4C6 /* Pods-GarmentDrops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarmentDrops.release.xcconfig"; path = "Pods/Target Support Files/Pods-GarmentDrops/Pods-GarmentDrops.release.xcconfig"; sourceTree = "<group>"; };
 		C89BBB32FC15968FFB1CD8C5 /* Pods-GarmentDrops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarmentDrops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GarmentDrops/Pods-GarmentDrops.debug.xcconfig"; sourceTree = "<group>"; };
 		EA4BDC0708633D17DBF94FBF /* libPods-GarmentDrops.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GarmentDrops.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +154,7 @@
 		40569E19219685450070B93A /* GarmentDrops */ = {
 			isa = PBXGroup;
 			children = (
+				40D83E872197343E00D68605 /* GarmentDropAPI */,
 				40569E50219686530070B93A /* Views */,
 				40569E4C219686220070B93A /* Models */,
 				40569E1A219685450070B93A /* AppDelegate.h */,
@@ -175,15 +197,21 @@
 		40569E4D219686270070B93A /* Type View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				40D83E882197350200D68605 /* View Controlller */,
+				40D83E892197350900D68605 /* View */,
+				409ED30821978D1300A6FBDA /* Collection View Cell */,
 			);
 			path = "Type View Controller";
 			sourceTree = "<group>";
 		};
-		40569E4E219686370070B93A /* Collection View Controller */ = {
+		40569E4E219686370070B93A /* Collections View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				409ED30F2197A1D900A6FBDA /* View Controller */,
+				409ED3102197A1E500A6FBDA /* View */,
+				409ED3112197A1EE00A6FBDA /* Collection View Cell */,
 			);
-			path = "Collection View Controller";
+			path = "Collections View Controller";
 			sourceTree = "<group>";
 		};
 		40569E4F2196864B0070B93A /* Garment Detail View Controller */ = {
@@ -196,9 +224,9 @@
 		40569E50219686530070B93A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				40569E4F2196864B0070B93A /* Garment Detail View Controller */,
-				40569E4E219686370070B93A /* Collection View Controller */,
 				40569E4D219686270070B93A /* Type View Controller */,
+				40569E4E219686370070B93A /* Collections View Controller */,
+				40569E4F2196864B0070B93A /* Garment Detail View Controller */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +263,69 @@
 				40569E6F21968A6A0070B93A /* DropDate.m */,
 			);
 			path = Seasons;
+			sourceTree = "<group>";
+		};
+		409ED30821978D1300A6FBDA /* Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				409ED30921978D2800A6FBDA /* TypeCollectionViewCell.h */,
+				409ED30A21978D2800A6FBDA /* TypeCollectionViewCell.m */,
+			);
+			path = "Collection View Cell";
+			sourceTree = "<group>";
+		};
+		409ED30F2197A1D900A6FBDA /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				409ED30C2197A1A300A6FBDA /* CollectionsViewController.h */,
+				409ED30D2197A1A300A6FBDA /* CollectionsViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		409ED3102197A1E500A6FBDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				409ED3122197A22300A6FBDA /* CollectionsView.h */,
+				409ED3132197A22300A6FBDA /* CollectionsView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		409ED3112197A1EE00A6FBDA /* Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				409ED3152197A59600A6FBDA /* CollectionsCollectionViewCell.h */,
+				409ED3162197A59600A6FBDA /* CollectionsCollectionViewCell.m */,
+			);
+			path = "Collection View Cell";
+			sourceTree = "<group>";
+		};
+		40D83E872197343E00D68605 /* GarmentDropAPI */ = {
+			isa = PBXGroup;
+			children = (
+				409ED30521975D7900A6FBDA /* GarmentDropAPI.h */,
+				409ED30621975D7900A6FBDA /* GarmentDropAPI.m */,
+			);
+			path = GarmentDropAPI;
+			sourceTree = "<group>";
+		};
+		40D83E882197350200D68605 /* View Controlller */ = {
+			isa = PBXGroup;
+			children = (
+				40D83E8A2197351B00D68605 /* TypeViewController.h */,
+				40D83E8B2197351B00D68605 /* TypeViewController.m */,
+			);
+			path = "View Controlller";
+			sourceTree = "<group>";
+		};
+		40D83E892197350900D68605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40D83E8D2197355000D68605 /* TypeView.h */,
+				40D83E8E2197355000D68605 /* TypeView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5C8485DFAAFFED77A1BF518 /* Frameworks */ = {
@@ -409,15 +500,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409ED3142197A22300A6FBDA /* CollectionsView.m in Sources */,
+				40D83E8C2197351B00D68605 /* TypeViewController.m in Sources */,
 				40569E7021968A6A0070B93A /* DropDate.m in Sources */,
+				409ED30E2197A1A300A6FBDA /* CollectionsViewController.m in Sources */,
 				40569E2A219685470070B93A /* main.m in Sources */,
 				40569E6D21968A2C0070B93A /* Season.m in Sources */,
+				409ED3172197A59600A6FBDA /* CollectionsCollectionViewCell.m in Sources */,
 				40569E5F219688EA0070B93A /* GarmentSize.m in Sources */,
 				40569E532196875B0070B93A /* BaseGarment.m in Sources */,
 				40569E5C2196888E0070B93A /* GarmentType.m in Sources */,
 				40569E68219689AF0070B93A /* GarmentImage.m in Sources */,
+				40D83E8F2197355000D68605 /* TypeView.m in Sources */,
 				40569E56219687C50070B93A /* Garment.m in Sources */,
+				409ED30721975D7900A6FBDA /* GarmentDropAPI.m in Sources */,
 				40569E65219689670070B93A /* GarmentFabric.m in Sources */,
+				409ED30B21978D2800A6FBDA /* TypeCollectionViewCell.m in Sources */,
 				40569E62219689430070B93A /* GarmentGender.m in Sources */,
 				40569E59219688350070B93A /* Colorway.m in Sources */,
 				40569E1C219685450070B93A /* AppDelegate.m in Sources */,
@@ -587,6 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WK9SVP2XJQ;
 				INFOPLIST_FILE = GarmentDrops/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,6 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WK9SVP2XJQ;
 				INFOPLIST_FILE = GarmentDrops/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

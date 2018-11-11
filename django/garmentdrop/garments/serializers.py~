@@ -13,7 +13,7 @@ from seasons.serializers import DropDateSerializer
 class GarmentTypeSerializer(ModelSerializer):
     class Meta:
         model = GarmentType
-        fields = ('name', 'description',)
+        fields = ('pk', 'name', 'description',)
 
 class GarmentFabricSerializer(ModelSerializer):
     class Meta:

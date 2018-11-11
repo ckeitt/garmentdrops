@@ -19,12 +19,11 @@
 //
 
 #import <CoreData/CoreData.h>
+#import <RestKit/CoreData/RKPropertyInspector+CoreData.h>
+#import <RestKit/ObjectMapping/RKObjectUtilities.h>
+#import <RestKit/Support/RKLog.h>
+#import <RestKit/Support/RKMacros.h>
 #import <objc/message.h>
-#import "RKPropertyInspector+CoreData.h"
-#import "RKLog.h"
-#import "RKObjectUtilities.h"
-#import "RKMacros.h"
-#import "RKBooleanClass.h"
 
 // Set Logging Component
 #undef RKLogComponent
@@ -51,7 +50,7 @@
         if ([attributeDescription attributeValueClassName]) {
             Class cls = NSClassFromString([attributeDescription attributeValueClassName]);
             if ([cls isSubclassOfClass:[NSNumber class]] && [attributeDescription attributeType] == NSBooleanAttributeType) {
-                cls = RK_BOOLEAN_CLASS;
+                cls = objc_getClass("NSCFBoolean") ?: objc_getClass("__NSCFBoolean") ?: cls;
             }
             RKPropertyInspectorPropertyInfo *info;
             info = [RKPropertyInspectorPropertyInfo propertyInfoWithName:name

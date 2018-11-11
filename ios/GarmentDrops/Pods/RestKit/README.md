@@ -71,7 +71,7 @@ RestKit is broken into several modules that cleanly separate the mapping engine 
   </tr>
   <tr>
     <td><a href="http://restkit.org/api/latest/Classes/RKRelationshipMapping.html">RKRelationshipMapping</a></td>
-    <td>Specifies a desired mapping of a nested to-one or to-many child objects in terms of a source and destination key path and an <tt>RKObjectMapping</tt> with which to map the attributes of the child object.</td>
+    <td>Specifies a desired mapping of a nested to-one or to-many child objects in in terms of a source and destination key path and an <tt>RKObjectMapping</tt> with which to map the attributes of the child object.</td>
   </tr>  
   <tr>
     <td><a href="http://restkit.org/api/latest/Classes/RKDynamicMapping.html">RKDynamicMapping</a></td>
@@ -528,7 +528,7 @@ RKMappingTest *mappingTest = [[RKMappingTest alloc] initWithMapping:mapping sour
 
 ## Requirements
 
-RestKit requires [iOS 8.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS8.html#//apple_ref/doc/uid/TP40014205-SW1) and above or [Mac OS X 10.9](https://developer.apple.com/library/mac/releasenotes/MacOSX/WhatsNewInOSX/Articles/MacOSX10_9.html#//apple_ref/doc/uid/TP40013207-CH100) and above.
+RestKit requires [iOS 5.1.1](http://developer.apple.com/library/ios/#releasenotes/General/WhatsNewIniPhoneOS/Articles/iOS5.html#//apple_ref/doc/uid/TP30915195-SW1) and above or [Mac OS X 10.7](http://developer.apple.com/library/mac/#releasenotes/MacOSX/WhatsNewInOSX/Articles/MacOSX10_7.html#//apple_ref/doc/uid/TP40010355-SW5) and above.
 
 Several third-party open source libraries are used within RestKit, including:
 
@@ -588,11 +588,10 @@ Change to the directory of your Xcode project, and Create and Edit your Podfile 
 $ cd /path/to/MyProject
 $ touch Podfile
 $ edit Podfile
-target "YOUR PROJECT" do
-	platform :ios, '7.0'
-	# Or platform :osx, '10.7'
-	pod 'RestKit', '~> 0.24.0'
-end
+platform :ios, '5.0'
+# Or platform :osx, '10.7'
+pod 'RestKit', '~> 0.24.0'
+
 # Testing and Search are optional components
 pod 'RestKit/Testing', '~> 0.24.0'
 pod 'RestKit/Search',  '~> 0.24.0'

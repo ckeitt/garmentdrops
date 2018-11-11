@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
+
 #import "Season.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSDate * createdAt;
 @property (nonatomic) NSDate * releaseDate;
 @property (nonatomic) Season * season;
+
++(NSDictionary *) mappingDictionary;
++(RKObjectMapping *) responseMapping;
++(RKResponseDescriptor *) responseDescriptor;
 
 @end
 

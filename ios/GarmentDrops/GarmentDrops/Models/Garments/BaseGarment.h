@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 #import "GarmentType.h"
+#import "DropDate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,8 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString * name;
 @property (nonatomic) GarmentType * type;
 @property (nonatomic) NSString * fabric;
+@property (nonatomic) DropDate * dropDate;
 
-//drop_date = models.ForeignKey(DropDate, blank=True, null=True)
++(NSDictionary *) mappingDictionary;
++(RKObjectMapping *) responseMapping;
++(RKResponseDescriptor *) responseDescriptor;
 
 @end
 

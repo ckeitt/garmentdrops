@@ -18,16 +18,15 @@
 //  limitations under the License.
 //
 
+#import <RestKit/CoreData/NSManagedObjectContext+RKAdditions.h>
+#import <RestKit/CoreData/RKFetchRequestManagedObjectCache.h>
+#import <RestKit/CoreData/RKInMemoryManagedObjectCache.h>
+#import <RestKit/CoreData/RKManagedObjectStore.h>
+#import <RestKit/CoreData/RKPropertyInspector+CoreData.h>
+#import <RestKit/ObjectMapping/RKPropertyInspector.h>
+#import <RestKit/Support/RKLog.h>
+#import <RestKit/Support/RKPathUtilities.h>
 #import <objc/runtime.h>
-#import "RKManagedObjectStore.h"
-#import "RKLog.h"
-#import "RKPropertyInspector.h"
-#import "RKPropertyInspector+CoreData.h"
-#import "RKPathUtilities.h"
-#import "RKInMemoryManagedObjectCache.h"
-#import "RKFetchRequestManagedObjectCache.h"
-#import "NSManagedObjectContext+RKAdditions.h"
-#import "RKManagedObjectStore_Private.h"
 
 // Set Logging Component
 #undef RKLogComponent
@@ -51,20 +50,13 @@ static BOOL RKIsManagedObjectContextDescendentOfContext(NSManagedObjectContext *
     return NO;
 }
 
-NSSet <NSManagedObjectID *> *RKSetOfManagedObjectIDsFromManagedObjectContextDidSaveNotification(NSNotification *notification)
+static NSSet *RKSetOfManagedObjectIDsFromManagedObjectContextDidSaveNotification(NSNotification *notification)
 {
-    NSMutableSet <NSManagedObjectID *> *objectIDs = [NSMutableSet set];
-    
-    void (^unionObjectIDs)(NSMutableSet *, NSSet *) = ^(NSMutableSet *objectIDs, NSSet *objects) {
-        if (objects != nil) {
-            [objectIDs unionSet:[objects valueForKey:NSStringFromSelector(@selector(objectID))]];
-        }
-    };
-    
-    unionObjectIDs(objectIDs,notification.userInfo[NSInsertedObjectsKey]);
-    unionObjectIDs(objectIDs,notification.userInfo[NSUpdatedObjectsKey]);
-    unionObjectIDs(objectIDs,notification.userInfo[NSDeletedObjectsKey]);
-    
+    NSUInteger count = [[[notification.userInfo allValues] valueForKeyPath:@"@sum.@count"] unsignedIntegerValue];
+    NSMutableSet *objectIDs = [NSMutableSet setWithCapacity:count];
+    for (NSSet *objects in [notification.userInfo allValues]) {
+        [objectIDs unionSet:[objects valueForKey:@"objectID"]];
+    }
     return objectIDs;
 }
 
@@ -367,6 +359,8 @@ static char RKManagedObjectContextChangeMergingObserverAssociationKey;
 
 - (void)recreateManagedObjectContexts
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSManagedObjectContextDidSaveNotification object:self.persistentStoreManagedObjectContext];
+
     self.persistentStoreManagedObjectContext = nil;
     self.mainQueueManagedObjectContext = nil;
     [self createManagedObjectContexts];

@@ -32,7 +32,8 @@
 
  The `RKObjectRequestOperation` superclass is responsible for the invocation of this method and the subsequent handling of the mapping result or error.
 
- @param completionBlock A mapping result or `nil` if an error has occurred.
+ @param error A pointer to an `NSError` object to be set in the event that the object mapping process has failed.
+ @return A mapping result or `nil` if an error has occurred.
  */
 - (void)performMappingOnResponseWithCompletionBlock:(void(^)(RKMappingResult *mappingResult, NSError *error))completionBlock;
 

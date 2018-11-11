@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) Colorway *  color;
 @property (nonatomic) GarmentSize * size;
 
++(NSDictionary *) mappingDictionary;
++(RKObjectMapping *) responseMapping;
++(RKResponseDescriptor *) responseDescriptor;
+
 @end
 
 NS_ASSUME_NONNULL_END

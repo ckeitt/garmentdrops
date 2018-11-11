@@ -63,7 +63,7 @@ class ListGarmentTypes(generics.ListAPIView):
 
 class ListSpecificGarmentTypes(generics.ListAPIView):
     """
-    View to list all garments of a specific in the system.
+    View to list all garments of a specific type in the system.
 
     * Public availability to all users.
     """
@@ -75,5 +75,4 @@ class ListSpecificGarmentTypes(generics.ListAPIView):
     def filter_queryset(self, queryset):
         queryset = Garment.objects.filter(base_garment__type__pk=self.kwargs['pk'])
         return queryset
-
 

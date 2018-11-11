@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'garments',
     'storages',
     'sorl.thumbnail',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

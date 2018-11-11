@@ -10,4 +10,27 @@
 
 @implementation GarmentType
 
++(NSDictionary *) mappingDictionary {
+    return  @{@"pk" : @"pk",
+              @"description" : @"garmentTypeDescription",
+              @"name" : @"name",
+              };
+}
+
++(RKObjectMapping *) responseMapping {
+    RKObjectMapping * rkom = [[RKObjectMapping alloc] initWithClass:[GarmentType class]];
+    
+    [rkom addAttributeMappingsFromDictionary:[GarmentType mappingDictionary]];
+    
+    return rkom;
+}
+
++(RKResponseDescriptor *) responseDescriptor {
+    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    
+    RKObjectMapping * rkom = [GarmentType responseMapping];
+    
+    return [RKResponseDescriptor responseDescriptorWithMapping:rkom method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:statusCodes];
+}
+
 @end

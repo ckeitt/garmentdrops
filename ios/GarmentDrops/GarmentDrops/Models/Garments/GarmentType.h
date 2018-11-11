@@ -7,14 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GarmentType : NSObject
 
+@property (nonatomic) NSString * pk;
 @property (nonatomic) NSString * garmentTypeDescription;
 @property (nonatomic) NSString * name;
-@property (nonatomic) NSDate * createdAt;
+
++(NSDictionary *) mappingDictionary;
++(RKObjectMapping *) responseMapping;
++(RKResponseDescriptor *) responseDescriptor;
 
 @end
 
