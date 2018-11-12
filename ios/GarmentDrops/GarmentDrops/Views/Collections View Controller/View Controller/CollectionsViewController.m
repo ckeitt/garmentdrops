@@ -53,13 +53,17 @@ NSString * collectionsCollectionViewCellID = @"collectionsCollectionViewCellID";
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.frame.size.width, 50);
+    return CGSizeMake(self.view.frame.size.width, [CollectionsCollectionViewCell collectionsCollectionViewCellHeight]);
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 1.0f;
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     CollectionsCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionsCollectionViewCellID forIndexPath:indexPath];
-    NSLog(@"%@", [self.garments objectAtIndex:indexPath.item].baseGarment.dropDate.season.seasonDescription);
+    
     [cell configureCellWithItem:[self.garments objectAtIndex:indexPath.item]];
     
     return cell;
@@ -67,7 +71,9 @@ NSString * collectionsCollectionViewCellID = @"collectionsCollectionViewCellID";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    GarmentDetailViewController * garmentDetailVC = [[GarmentDetailViewController alloc] initWithGarment:[self.garments objectAtIndex:indexPath.item]];
     
+    [self.navigationController pushViewController:garmentDetailVC animated:YES];
 }
 
 @end

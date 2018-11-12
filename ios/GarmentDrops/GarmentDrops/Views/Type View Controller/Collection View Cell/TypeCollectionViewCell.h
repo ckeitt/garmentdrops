@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)configureCellWithItem:(GarmentType *) garmentType;
 
++(CGFloat) typeCollectionViewCellHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,9 +12,11 @@
 #import "CollectionsView.h"
 #import "CollectionsCollectionViewCell.h"
 
+#import "GarmentDetailViewController.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CollectionsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CollectionsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic) CollectionsView * collectionsView;
 @property (nonatomic) GarmentType * type;

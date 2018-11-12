@@ -8,8 +8,8 @@
 
 #import "GarmentDropAPI.h"
 
-NSString * BASE_TYPES_URL = @"http://127.0.0.1:8000/garments/types/";
-NSString * BASE_GARMENTS_FROM_TYPES_URL = @"http://127.0.0.1:8000/garments/types/%@/";
+NSString * BASE_TYPES_URL = @"http://192.168.1.72:8000/garments/types/";
+NSString * BASE_GARMENTS_FROM_TYPES_URL = @"http://192.168.1.72:8000/garments/types/%@/";
 
 @implementation GarmentDropAPI
 

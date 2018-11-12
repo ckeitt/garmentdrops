@@ -53,7 +53,7 @@ NSString * typeCollectionViewCellID = @"typeCollectionViewCellID";
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.frame.size.width, 50);
+    return CGSizeMake(self.view.frame.size.width, [TypeCollectionViewCell typeCollectionViewCellHeight]);
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -63,6 +63,10 @@ NSString * typeCollectionViewCellID = @"typeCollectionViewCellID";
     [cell configureCellWithItem:[self.types objectAtIndex:indexPath.item]];
     
     return cell;
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 1.0f;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

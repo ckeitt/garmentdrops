@@ -9,6 +9,8 @@
 #import "TypeCollectionViewCell.h"
 
 CGFloat TYPE_COLLECTION_CELL_LEFT_TEXT_MARGIN = 10.0f;
+CGFloat TYPE_COLLECTION_CELL_HEIGHT = 50.0f;
+CGFloat TYPE_COLLECTION_CELL_FONT_SIZE = 14.0f;
 
 @implementation TypeCollectionViewCell
 
@@ -23,12 +25,11 @@ CGFloat TYPE_COLLECTION_CELL_LEFT_TEXT_MARGIN = 10.0f;
 
 -(void)base_init {
     
-    self.layer.borderWidth = 0.25;
-    self.layer.borderColor = [UIColor blackColor].CGColor;
-    
+    self.backgroundColor = [UIColor whiteColor];
+
     self.attributeLabel = [UILabel new];
     self.attributeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.attributeLabel.font = [UIFont systemFontOfSize:25.0];
+    self.attributeLabel.font = [UIFont fontWithName:@"PingFangSC-Light" size:TYPE_COLLECTION_CELL_FONT_SIZE];
     self.attributeLabel.textColor = [UIColor blackColor];
     
     [self addSubview:self.attributeLabel];
@@ -37,6 +38,12 @@ CGFloat TYPE_COLLECTION_CELL_LEFT_TEXT_MARGIN = 10.0f;
 
 -(void)configureCellWithItem:(GarmentType *) garmentType {
     self.attributeLabel.text = garmentType.name;
+}
+
+#pragma mark - Sizing Class Methods
+
++(CGFloat) typeCollectionViewCellHeight {
+    return TYPE_COLLECTION_CELL_HEIGHT;
 }
 
 #pragma mark - Auto Layout Methods

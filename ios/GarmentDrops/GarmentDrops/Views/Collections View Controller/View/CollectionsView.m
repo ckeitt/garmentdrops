@@ -21,7 +21,7 @@
 -(void) base_init {
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:[UICollectionViewFlowLayout new]];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self addSubview:self.collectionView];

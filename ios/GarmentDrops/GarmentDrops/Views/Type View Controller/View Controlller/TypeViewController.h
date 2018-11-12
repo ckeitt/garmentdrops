@@ -17,7 +17,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TypeViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface TypeViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic) TypeView * typeView;
 @property (nonatomic) NSArray<GarmentType *> * types;

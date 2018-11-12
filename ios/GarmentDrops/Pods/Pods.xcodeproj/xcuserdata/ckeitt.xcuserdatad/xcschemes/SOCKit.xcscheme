@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B412DC9823002E1AF8896C088A08A186"
+               BlueprintIdentifier = "AE03CA302AF77BD6C26CB3854A826614"
                BlueprintName = "SOCKit"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libSOCKit.a">
