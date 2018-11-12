@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GarmentDropAPI : UIView
 
 -(void) garmentTypes: (void (^) (NSArray<GarmentType *> * types)) success  failure: (void (^) (NSError * error)) failure;
--(void) garmentsWithTypeFromGarmentTypeID: (NSString *) garmentType success: (void (^) (NSArray<Garment *> * garments)) success  failure: (void (^) (NSError * error)) failure;
+-(void) garmentsWithTypeFromGarmentTypeID: (NSString *) garmentType success: (void (^) (NSArray<BaseGarment *> * garments)) success  failure: (void (^) (NSError * error)) failure;
+-(void) populateGarmentDetailViewWithGarments: (NSString *) baseGarmentID success: (void (^) (NSArray<Garment *> * garments)) success  failure: (void (^) (NSError * error)) failure;
+
 
 +(id) manager;
 

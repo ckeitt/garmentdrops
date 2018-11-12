@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CharacteristicsView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GarmentDetailView : UIView
+
+@property (nonatomic) UIScrollView * scrollView;
+@property (nonatomic) UIScrollView * imageScrollView;
+@property (nonatomic) CharacteristicsView * characteristicsView;
 
 @end
 

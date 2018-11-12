@@ -38,8 +38,8 @@ NSString * collectionsCollectionViewCellID = @"collectionsCollectionViewCellID";
 }
 
 -(void) populateCollectionViewWithGarments {
-    [[GarmentDropAPI manager] garmentsWithTypeFromGarmentTypeID:self.type.pk success:^(NSArray<Garment *> * _Nonnull garments) {
-        self.garments = [garments copy];
+    [[GarmentDropAPI manager] garmentsWithTypeFromGarmentTypeID:self.type.pk success:^(NSArray<BaseGarment *> * _Nonnull garments) {
+        self.baseGarments = [garments copy];
         [self.collectionsView.collectionView reloadData];
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"ERROR: %@", error);
@@ -49,7 +49,7 @@ NSString * collectionsCollectionViewCellID = @"collectionsCollectionViewCellID";
 #pragma mark - Collection View Data Source & Delegate Methods
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.garments count];
+    return [self.baseGarments count];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -64,14 +64,14 @@ NSString * collectionsCollectionViewCellID = @"collectionsCollectionViewCellID";
     
     CollectionsCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionsCollectionViewCellID forIndexPath:indexPath];
     
-    [cell configureCellWithItem:[self.garments objectAtIndex:indexPath.item]];
+    [cell configureCellWithItem:[self.baseGarments objectAtIndex:indexPath.item]];
     
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    GarmentDetailViewController * garmentDetailVC = [[GarmentDetailViewController alloc] initWithGarment:[self.garments objectAtIndex:indexPath.item]];
+    GarmentDetailViewController * garmentDetailVC = [[GarmentDetailViewController alloc] initWithGarment:[self.baseGarments objectAtIndex:indexPath.item]];
     
     [self.navigationController pushViewController:garmentDetailVC animated:YES];
 }

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) CollectionsView * collectionsView;
 @property (nonatomic) GarmentType * type;
-@property (nonatomic) NSArray<Garment *> * garments;
+@property (nonatomic) NSArray<BaseGarment *> * baseGarments;
 
 -(instancetype)initWithGarmentType: (GarmentType *) garmentType;
 

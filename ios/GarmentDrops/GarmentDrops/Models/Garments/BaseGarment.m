@@ -11,7 +11,8 @@
 @implementation BaseGarment
 
 +(NSDictionary *) mappingDictionary {
-    return  @{@"created_at" : @"createdAt",
+    return  @{@"pk" : @"pk",
+              @"created_at" : @"createdAt",
               @"updated_at" : @"updatedAt",
               @"description" : @"garmentDescription",
               @"name" : @"name",

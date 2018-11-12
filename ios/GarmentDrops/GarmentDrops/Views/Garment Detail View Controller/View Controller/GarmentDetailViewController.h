@@ -15,10 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GarmentDetailViewController : UIViewController
 
-@property (nonatomic) Garment * garment;
+@property (nonatomic) BaseGarment * baseGarment;
+@property (nonatomic) NSArray<Garment *> * garments;
 @property (nonatomic) GarmentDetailView * garmentDetailView;
 
--(instancetype)initWithGarment: (Garment *) garment;
+-(instancetype)initWithGarment: (BaseGarment *) baseGarment;
 
 @end
 

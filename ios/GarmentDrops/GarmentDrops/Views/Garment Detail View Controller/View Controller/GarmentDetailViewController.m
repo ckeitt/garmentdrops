@@ -14,9 +14,9 @@
 
 @implementation GarmentDetailViewController
 
--(instancetype)initWithGarment: (Garment *) garment {
+-(instancetype)initWithGarment: (BaseGarment *) baseGarment {
     if (self = [super init]) {
-        self.garment = garment;
+        self.baseGarment = baseGarment;
         [self base_init];
     }
     
@@ -28,6 +28,17 @@
     self.garmentDetailView = [[GarmentDetailView alloc] init];
     
     self.view = self.garmentDetailView;
+    
+    [self populateGarmentDetailViewWithGarments];
+}
+
+-(void) populateGarmentDetailViewWithGarments {
+    [[GarmentDropAPI manager] populateGarmentDetailViewWithGarments:self.baseGarment.pk success:^(NSArray<Garment *> * _Nonnull garments) {
+        self.garments = [garments copy];
+        [self.garmentDetailView.characteristicsView configureViewWithItem:[self.garments firstObject]];
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"ERROR: %@", error);
+    }];
     
 }
 

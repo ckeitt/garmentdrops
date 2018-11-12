@@ -23,6 +23,7 @@
 		40569E68219689AF0070B93A /* GarmentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E67219689AF0070B93A /* GarmentImage.m */; };
 		40569E6D21968A2C0070B93A /* Season.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E6C21968A2C0070B93A /* Season.m */; };
 		40569E7021968A6A0070B93A /* DropDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40569E6F21968A6A0070B93A /* DropDate.m */; };
+		409ED131219A1ECC00E203F1 /* CharacteristicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED130219A1ECC00E203F1 /* CharacteristicsView.m */; };
 		409ED30721975D7900A6FBDA /* GarmentDropAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED30621975D7900A6FBDA /* GarmentDropAPI.m */; };
 		409ED30B21978D2800A6FBDA /* TypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED30A21978D2800A6FBDA /* TypeCollectionViewCell.m */; };
 		409ED30E2197A1A300A6FBDA /* CollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409ED30D2197A1A300A6FBDA /* CollectionsViewController.m */; };
@@ -86,6 +87,8 @@
 		40569E6C21968A2C0070B93A /* Season.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Season.m; sourceTree = "<group>"; };
 		40569E6E21968A6A0070B93A /* DropDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDate.h; sourceTree = "<group>"; };
 		40569E6F21968A6A0070B93A /* DropDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropDate.m; sourceTree = "<group>"; };
+		409ED12F219A1ECC00E203F1 /* CharacteristicsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacteristicsView.h; sourceTree = "<group>"; };
+		409ED130219A1ECC00E203F1 /* CharacteristicsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacteristicsView.m; sourceTree = "<group>"; };
 		409ED30521975D7900A6FBDA /* GarmentDropAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarmentDropAPI.h; sourceTree = "<group>"; };
 		409ED30621975D7900A6FBDA /* GarmentDropAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarmentDropAPI.m; sourceTree = "<group>"; };
 		409ED30921978D2800A6FBDA /* TypeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeCollectionViewCell.h; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 			children = (
 				40CF1EB22199E13200331E84 /* GarmentDetailView.h */,
 				40CF1EB32199E13200331E84 /* GarmentDetailView.m */,
+				409ED12F219A1ECC00E203F1 /* CharacteristicsView.h */,
+				409ED130219A1ECC00E203F1 /* CharacteristicsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 				40CF1EB42199E13200331E84 /* GarmentDetailView.m in Sources */,
 				40569E7021968A6A0070B93A /* DropDate.m in Sources */,
 				409ED30E2197A1A300A6FBDA /* CollectionsViewController.m in Sources */,
+				409ED131219A1ECC00E203F1 /* CharacteristicsView.m in Sources */,
 				40569E2A219685470070B93A /* main.m in Sources */,
 				40569E6D21968A2C0070B93A /* Season.m in Sources */,
 				409ED3172197A59600A6FBDA /* CollectionsCollectionViewCell.m in Sources */,

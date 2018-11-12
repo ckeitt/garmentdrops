@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "BaseGarment.h"
 #import "Garment.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) UILabel * indicatorLabel;
 @property (nonatomic) UIImageView * imageView;
 
--(void)configureCellWithItem:(Garment *) garment;
+-(void)configureCellWithItem:(BaseGarment *) baseGarment;
 
 +(CGFloat) collectionsCollectionViewCellHeight;
 

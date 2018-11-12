@@ -44,8 +44,8 @@ CGFloat COLLECTIONS_COLLECTION_CELL_FONT_SIZE = 14.0f;
     [self layoutAttributeLabel];
 }
 
--(void)configureCellWithItem:(Garment *) garment {
-    self.attributeLabel.text = garment.baseGarment.name;
+-(void)configureCellWithItem:(BaseGarment *) baseGarment {
+    self.attributeLabel.text = baseGarment.name;
 }
 
 #pragma mark - Sizing Class Methods

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseGarment : NSObject
 
+@property (nonatomic) NSString * pk;
 @property (nonatomic) NSDate * createdAt;
 @property (nonatomic) NSDate * updatedAt;
 @property (nonatomic) NSString * garmentDescription;
